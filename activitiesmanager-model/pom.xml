@@ -2,9 +2,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.ads.activitiesmanager.model</groupId>
 	<artifactId>activitiesmanager-model</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>activitiesmanager-model</name>
 	<description>Model for Activities Manager application</description>
+	<packaging>jar</packaging>
+	
+	<parent>
+		<groupId>it.ads.activitiesmanager</groupId>
+		<artifactId>activitiesmanager-parent</artifactId>
+		<version>${activitiesmanager.version}</version>
+	</parent>
 	
 	<build>
 		<plugins>
@@ -19,4 +25,80 @@
 		</plugins>
 	</build>
 	
+	<dependencies>
+	
+	<!-- SPRING -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+	
+<!-- MySQL database driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		
+<!-- HSQL database driver (per i test) -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb.version}</version>
+		</dependency>
+
+<!-- ENTITY MANAGER -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+<!--  JAVAX persistence -->
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>${persistence.version}</version>
+		</dependency>
+	
+<!--  HIBERNATE -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>${hibernate-common.version}</version>
+		</dependency>
+		
+	</dependencies>
+		
 </project>
