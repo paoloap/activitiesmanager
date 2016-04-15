@@ -31,7 +31,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 				.authoritiesByUsernameQuery(	"SELECT User.U_LOGIN, Role.R_NAME AS ROLE "
 											+	"FROM User, Role "
 											+	"WHERE User.U_ROLE_ID = Role.ROLE_ID AND User.U_LOGIN=?");	
-	}
+	}	
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {

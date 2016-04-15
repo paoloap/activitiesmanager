@@ -27,12 +27,11 @@ public class WebConfig {
 	@Autowired
 	private Environment env;
 	
-	/*
 	@Bean
 	public DriverManagerDataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource(env.getRequiredProperty("db.jdbcurl"), env.getRequiredProperty("db.username"),env.getRequiredProperty("db.password"));
 		dataSource.setDriverClassName(env.getRequiredProperty("db.driver"));
 		return dataSource;
 	}
-	*/
+
 }

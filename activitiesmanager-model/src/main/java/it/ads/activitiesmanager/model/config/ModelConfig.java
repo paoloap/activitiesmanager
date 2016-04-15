@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -29,8 +30,8 @@ import it.ads.activitiesmanager.model.entity.User;
 @Configuration
 @EnableTransactionManagement
 @PropertySource("classpath:db.properties")
-@ComponentScan(basePackages = { "it.ads.activitiesmanager.model", "it.ads.activitiesmanager.model.dao" })
-//@Profile("production")
+@ComponentScan(basePackages = { "it.ads.activitiesmanager.model" })
+@Profile("production")
 public class ModelConfig {
 	
 	@Autowired
